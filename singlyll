@@ -1,0 +1,76 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNhcVnTBpHnN0tFuIQ380Xt",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Snehitha2003M/Assignment/blob/main/singlyll\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VY3Zm1NN3JCl",
+        "outputId": "79194380-b56f-4125-eec6-16962911396d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30\n",
+            "10\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Node :\n",
+        "  def __init__(self,data):\n",
+        "      self.data = data\n",
+        "      self.ref = None\n",
+        "class Linkedlist:\n",
+        "  def __init__(self):\n",
+        "    self.head = None\n",
+        "  def print_LL(self):\n",
+        "      if self.head is None:\n",
+        "        print (\"Linked list is empty\")\n",
+        "      else:\n",
+        "        n = self.head\n",
+        "        while n is not None:\n",
+        "          print(n.data)\n",
+        "          n=n.ref\n",
+        "  def add_begin(self,data):\n",
+        "    new_node = Node(data)\n",
+        "    new_node.ref=self.head\n",
+        "    self.head = new_node\n",
+        "LL1 =Linkedlist()\n",
+        "LL1.add_begin(10)\n",
+        "LL1.add_begin(30)\n",
+        "LL1.print_LL()\n"
+      ]
+    }
+  ]
+}
